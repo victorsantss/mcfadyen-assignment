@@ -5,7 +5,6 @@
         <referenceBlock name="catalog.compare.sidebar" remove="true" />
         <referenceBlock name="authorization-link-login" remove="true"/>
 
-        <!-- Header -->
         <referenceContainer name="panel.wrapper">
             <container name="panel-wrapper" htmlTag="div" htmlClass="your-class"/>
             <referenceBlock name="header.links">
@@ -14,8 +13,6 @@
             </referenceBlock>
         </referenceContainer>
 
-
-        <!-- Logo -->
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/image.png</argument>
@@ -24,22 +21,19 @@
             </arguments>
         </referenceBlock>
 
-        <!--Creating header columns-->
         <referenceContainer name="header-wrapper">
             <container name="header.left" label="headerLeft" htmlTag="div" htmlClass="left-col" />
             <container name="header.right" label="headerRight" htmlTag="div" htmlClass="right-col">
-                <block name="fav.icon" template="Magento_Theme::header/fav_icon.phtml" />
+                <block name="heart.icon" template="Magento_Theme::header/heart_icon.phtml" />
                 <block name="consultation" template="Magento_Theme::header/consultation.phtml" />
                 <block name="sign.in" template="Magento_Theme::header/sign_in.phtml" />
             </container>
         </referenceContainer>
 
-        <!-- Move -->
         <move element="logo" destination="header.left" />
         <move element="top.search" destination="header.left" after="logo" />
 
         <move element="minicart" destination="header.right" />
-        <move element="fav.icon" destination="header.right" after="authorization-link-login" />
-        <!-- HEADER END -->
+        <move element="heart.icon" destination="header.right" after="authorization-link-login" />
     </body>
 </page>
